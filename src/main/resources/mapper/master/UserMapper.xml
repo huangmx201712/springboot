@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.hmx.demotest.dao.master.UserDao">
+
+    <resultMap id="BaseResultMap" type="com.hmx.demotest.entity.User">
+        <result column="id" property="id" />
+        <result column="loginAcct" property="loginAcct" />
+        <result column="password" property="password" />
+        <result column="nickName" property="nickName" />
+    </resultMap>
+
+
+    <select id="findUser" parameterType="java.util.HashMap" resultMap="BaseResultMap">
+      select * from sys_user
+    </select>
+
+
+</mapper>
